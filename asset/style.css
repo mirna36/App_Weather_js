@@ -48,8 +48,12 @@ h1, h3, h5 {
 }
 .weather-temp{
     display: flex;
+    flex-direction: column;
     align-items: center;
    
+}
+#dayCondition{
+    margin-top:0px;
 }
 .name{
     font-size:5rem;
@@ -61,26 +65,14 @@ h1, h3, h5 {
 .currentCity .date{
     font-size:1.5rem;
 }
-.currentCity .temp{
-    font-size:5rem;
+.currentCity .temp_current{
+    font-size:2rem;
+    margin-top: 1rem;
 }
 .currentCity .details{
 font-size: 2rem;
 }
 
-.details{
-padding: 0px;
-margin-top: 0px;
-margin-bottom: 3rem;
-margin-right: 10px;
-font-size: 0.8rem;
-
-} 
-.details li{
-    list-style: none;
-    
-
-}
 .panel{
     position: absolute;
     width: 50%;
@@ -169,21 +161,13 @@ font-size: 0.8rem;
     width:100%;
   
 }
-.details {
-    text-align: center;
-}
-.card .date{
+
+.card {
    font-size:1rem; 
 }
-.card img.icon{
-    margin-top: 10px;
-}
+
 @media screen and (max-width: 1315px){
- .panel{
-    
-    width: 70%;
-    
-} 
+  
 .name{
     font-size:3rem;
 
@@ -211,10 +195,15 @@ font-size: 1.5rem;
     }
    
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 580px){
     html{
         font-size: 12px;
     }
+    .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 }
 
